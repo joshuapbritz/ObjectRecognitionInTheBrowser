@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* This will make our app feel "fullscreen" */
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Display the description as a label at the top of the screen */
+.description-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 45px;
+  background-color: #ffffff;
+  z-index: 40;
+  padding: 10px 15px;
+  max-width: 350px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.4);
+}
+
+/* Make the camera full screen */
+.camera-outlet {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.camera-outlet video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Make the loader sit on top of everything */
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background-color: #3b3b3b;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
